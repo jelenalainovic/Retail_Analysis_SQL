@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS inventory;
 DROP TABLE IF EXISTS color;
 DROP TABLE IF EXISTS item;
 DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS item_category;
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customer;
 
@@ -364,7 +365,11 @@ WHERE c.c_id = o.c_id AND o.o_id = ol.o_id AND ol.inv_id = i.inv_id
 	ORDER BY SUM(i.inv_price * ol.ol_quantity) DESC;
 
 
--- Renaming the category table into item_category
+-- =================================================================================
+-- Modifying the Database (Renaming a table - new name will be used moving forward)
+-- =================================================================================
+
+-- Renaming the category table into item_category (all future queries will use this name)
 ALTER TABLE category 
 RENAME TO item_category;
 
