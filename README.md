@@ -42,6 +42,15 @@ From designing the database structure to running advanced queries, this project 
 
 ---
 
+## ▶️ How to Use
+
+1. Download the repository files (`.sql` and `.db`)
+2. Open DBeaver (or any SQL tool that supports SQLite)
+3. Connect to the `.db` file
+4. Run the queries from `retail_analysis.sql` to explore the data and analysis
+
+---
+
 ## 🚀 Why This Project Matters
 
 This project goes beyond basic SQL by combining:
